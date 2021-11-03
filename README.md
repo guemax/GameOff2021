@@ -6,11 +6,9 @@
 <!--- ![GitHub top language](https://img.shields.io/github/languages/top/guemax/GameOff2021)
 --->
 
-This is my repository for the game I make for the Game Off 2021. It will be using Godot 3.3.4 and Blender 2.93.
+This is my repository for the game I make for the Game Off 2021. It will be using Godot 3.3.4 and Blender 2.93. During developing, I had the idea of calling my game "Buggy Attack". The name might still be modified.
 
 Link to the game jam: https://itch.io/jam/game-off-2021
-
-During developing, I had the idea of calling my game "Buggy Attack". The name might still be modified.
 
 ## The idea
 
