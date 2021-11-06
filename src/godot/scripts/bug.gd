@@ -6,9 +6,8 @@ export var jump_impulse := 25
 
 var velocity = Vector3.ZERO
 
+onready var state_machine = $AnimationTree.get("parameters/playback")
 onready var pivot = $pivot
-
-# onready var _model: Spatial = $Armature001
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -27,9 +26,8 @@ func _physics_process(delta: float) -> void:
 	
 	# if BUG IS MOVING
 	if move_direction != Vector3.ZERO:
-		$AnimationPlayer.play("bug-walk-loop")		
+		state_machine.travel("bug-walk-loop")	
 	else:
-		$AnimationPlayer.stop()
-		$AnimationPlayer.play("bug-head-loop")
+		state_machine.travel("bug-head-loop")
 	
 	velocity = move_and_slide(velocity, Vector3.UP)
