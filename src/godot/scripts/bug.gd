@@ -1,9 +1,11 @@
 extends KinematicBody
 
-export var speed := 1.0
+export var speed := 1.5
 export var gravity := 70
 export var jump_impulse := 25
 
+var spin_speed = 0.1
+var spin = 0.15  # rotation speed
 var velocity = Vector3.ZERO
 
 onready var state_machine = $AnimationTree.get("parameters/playback")
@@ -14,20 +16,25 @@ func _ready():
 	pass # Replace with function body.
 
 func _physics_process(delta: float) -> void:
-	var move_direction := Vector3.ZERO
+	velocity = Vector3()
 	
-	move_direction.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
-	move_direction.z = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
-	
-	move_direction.normalized()
-		
-	velocity.x = move_direction.x * (speed * 0.75)
-	velocity.z = move_direction.z * speed
+	if Input.is_action_pressed("ui_down"):
+		velocity += -transform.basis.x * speed
+	elif Input.is_action_pressed("ui_up"):
+		velocity += transform.basis.x * speed
 	
 	# if BUG IS MOVING
-	if move_direction != Vector3.ZERO:
+	if velocity != Vector3.ZERO:
 		state_machine.travel("bug-walk-loop")	
 	else:
 		state_machine.travel("bug-head-loop")
 	
 	velocity = move_and_slide(velocity, Vector3.UP)
+
+func _unhandled_input(event):
+	# Handles rotating the bug when pressing left or right arrow key
+	if event is InputEventKey:
+		if event.pressed and event.scancode == KEY_LEFT:
+			rotate_y(lerp(0, spin, spin_speed))
+		if event.pressed and event.scancode == KEY_RIGHT:
+			rotate_y(-lerp(0, spin, spin_speed))	
