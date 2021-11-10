@@ -17,6 +17,21 @@ This is my idea for the game, on the topic of bugs:
 > Due to a bug in a computer program, our main character, the insect, can get into the target computer. Before the malicious code which the insect brings with it can be executed, however, the insect has to make its way through a labyrinth (the computer's hard drive) and comes across files of the user lying around. These can be encrypted to obtain points. In addition, it is possible to set path markers to help the user find his way. Since the insect leaves traces, points are subtracted.
 > Once the goal is reached, the malicious code is executed on the command line, the player types the commands himself, but gets help. Due to an error in the maleware, the program cannot run and we get a nasty error message. Afterwards, the labyrinth is evaluated and points are counted.
 
+## How to play
+
+This game is currently in development and has no binaries yet. So if you would like to play it now (you could also wait until I publish a binary), download the source code and open the project in Godot.
+
+### How to control the bug
+
+For controlling the movement of the bug, press the following keys:
+
+| Key         | Action         |
+| ----------- | -------------- |
+| Left arrow  | Rotate left    |
+| Right arrow | Rotate right   |
+| Up arrow    | Move forwards  |
+| Down arrow  | Move backwards |
+
 ## Credits
 
 Badges by [Shields](https://shields.io)
