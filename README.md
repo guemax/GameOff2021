@@ -21,7 +21,8 @@ This is my idea for the game, on the topic of bugs:
 
 ## Credits
 
-Badges by [Shields](https://shields.io)
+Badges by [Shields](https://shields.io)  
+Labyrinth layout by [Maze Generator](https://www.mazegenerator.net/)
 
 ## License
 
