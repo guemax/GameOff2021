@@ -36,7 +36,7 @@ For controlling the movement of the bug, press the following keys:
 ## Credits
 
 Badges by [Shields](https://shields.io)  
-Textures by [Polyhaven](https://polyhaven.com/textures)
+Textures by [Polyhaven](https://polyhaven.com/textures)  
 Labyrinth layout by [Maze Generator](https://www.mazegenerator.net/)
 
 ## License
