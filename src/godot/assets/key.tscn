@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://imports/key-silver.material" type="Material" id=1]
+[ext_resource path="res://scripts/password.gd" type="Script" id=2]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "blade"
@@ -52,8 +53,9 @@ tracks/0/keys = {
 "values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0.341879, 0 ), Vector3( 0, 0.341879, 0 ), Vector3( 0, 0, 0 ) ]
 }
 
-[node name="coin" type="Area"]
+[node name="password" type="Area"]
 transform = Transform( 0.3, 0, 0, 0, -1.31134e-08, -0.3, 0, 0.3, -1.31134e-08, 0, -0.0146184, 0 )
+script = ExtResource( 2 )
 
 [node name="blade" type="MeshInstance" parent="."]
 transform = Transform( 1.81562, 0, 0, 0, 0.1085, 0, 0, 0, 0.570136, -0.882179, 0, 0.124079 )
@@ -84,3 +86,8 @@ light_energy = 2.38
 light_specular = 0.48
 shadow_enabled = true
 omni_range = 2.25713
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
