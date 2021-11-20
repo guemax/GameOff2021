@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://imports/key-silver.material" type="Material" id=1]
 [ext_resource path="res://scripts/password.gd" type="Script" id=2]
@@ -53,8 +53,24 @@ tracks/0/keys = {
 "values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0.341879, 0 ), Vector3( 0, 0.341879, 0 ), Vector3( 0, 0, 0 ) ]
 }
 
+[sub_resource type="Animation" id=5]
+resource_name = "shrink"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0.3, 0.3, 0.3 ), Vector3( 0.01, 0.01, 0.01 ) ]
+}
+
 [node name="password" type="Area"]
-transform = Transform( 0.3, 0, 0, 0, -1.31134e-08, -0.3, 0, 0.3, -1.31134e-08, 0, -0.0146184, 0 )
+transform = Transform( 0.3, 0, 0, 0, -1.31134e-08, -0.3, 0, 0.3, -1.31134e-08, 0, 0, 0 )
 script = ExtResource( 2 )
 
 [node name="blade" type="MeshInstance" parent="."]
@@ -78,16 +94,17 @@ shape = SubResource( 3 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "key-loop"
 anims/key-loop = SubResource( 4 )
+anims/shrink = SubResource( 5 )
 
 [node name="OmniLight" type="OmniLight" parent="."]
 transform = Transform( 3.33333, 0, 0, 0, 3.33333, 0, 0, 0, 3.33333, 0, -0.222973, -2.35929 )
-light_color = Color( 0.45098, 1, 0.690196, 1 )
+light_color = Color( 0.835294, 1, 0.941176, 1 )
 light_energy = 2.38
 light_specular = 0.48
 shadow_enabled = true
 omni_range = 2.25713
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 0.4
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
