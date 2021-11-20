@@ -34,7 +34,7 @@ surfaces/0 = {
 }
 
 [sub_resource type="BoxShape" id=3]
-extents = Vector3( 2.63882, 1, 1.61298 )
+extents = Vector3( 2.63882, 0.262458, 1.55553 )
 
 [sub_resource type="Animation" id=4]
 resource_name = "key-loop"
@@ -55,7 +55,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=5]
 resource_name = "shrink"
-length = 0.4
+length = 0.2
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:scale")
 tracks/0/interp = 1
@@ -63,10 +63,22 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.4 ),
+"times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector3( 0.3, 0.3, 0.3 ), Vector3( 0.01, 0.01, 0.01 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("OmniLight:light_energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 1.68, 0.0 ]
 }
 
 [node name="password" type="Area"]
@@ -99,12 +111,13 @@ anims/shrink = SubResource( 5 )
 [node name="OmniLight" type="OmniLight" parent="."]
 transform = Transform( 3.33333, 0, 0, 0, 3.33333, 0, 0, 0, 3.33333, 0, -0.222973, -2.35929 )
 light_color = Color( 0.835294, 1, 0.941176, 1 )
-light_energy = 2.38
+light_energy = 1.68
 light_specular = 0.48
 shadow_enabled = true
 omni_range = 2.25713
+omni_attenuation = 2.46229
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.4
+wait_time = 0.2
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
