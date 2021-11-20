@@ -7,7 +7,7 @@
 [ext_resource path="res://assets/wall-library.tres" type="MeshLibrary" id=5]
 [ext_resource path="res://sprites/10 by 10 orthogonal maze.png" type="Texture" id=6]
 [ext_resource path="res://assets/key.tscn" type="PackedScene" id=7]
-[ext_resource path="res://fonts/Poppins/Poppins-Regular.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://fonts/Poppins/Poppins-Medium.ttf" type="DynamicFontData" id=8]
 [ext_resource path="res://scripts/CounterPasswords.gd" type="Script" id=9]
 
 [sub_resource type="SpatialMaterial" id=1]
@@ -104,6 +104,46 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.5022, 1.63019, 26.3602 )
 
 [node name="password" parent="Passwords/passwordsContainer2" instance=ExtResource( 7 )]
 
+[node name="passwordsContainer3" type="Spatial" parent="Passwords"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.6366, 1.63019, 19.6654 )
+
+[node name="password" parent="Passwords/passwordsContainer3" instance=ExtResource( 7 )]
+
+[node name="passwordsContainer4" type="Spatial" parent="Passwords"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.75592, 1.63019, 3.25095 )
+
+[node name="password" parent="Passwords/passwordsContainer4" instance=ExtResource( 7 )]
+
+[node name="passwordsContainer5" type="Spatial" parent="Passwords"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.61, 1.63019, -8.50937 )
+
+[node name="password" parent="Passwords/passwordsContainer5" instance=ExtResource( 7 )]
+
+[node name="passwordsContainer6" type="Spatial" parent="Passwords"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.273, 1.63019, -8.086 )
+
+[node name="password" parent="Passwords/passwordsContainer6" instance=ExtResource( 7 )]
+
+[node name="passwordsContainer7" type="Spatial" parent="Passwords"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.01653, 1.63019, -25.5383 )
+
+[node name="password" parent="Passwords/passwordsContainer7" instance=ExtResource( 7 )]
+
+[node name="passwordsContainer8" type="Spatial" parent="Passwords"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.70888, 1.63019, -25.5383 )
+
+[node name="password" parent="Passwords/passwordsContainer8" instance=ExtResource( 7 )]
+
+[node name="passwordsContainer9" type="Spatial" parent="Passwords"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.8106, 1.63019, -2.7233 )
+
+[node name="password" parent="Passwords/passwordsContainer9" instance=ExtResource( 7 )]
+
+[node name="passwordsContainer10" type="Spatial" parent="Passwords"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -19.973, 1.63019, -9.26203 )
+
+[node name="password" parent="Passwords/passwordsContainer10" instance=ExtResource( 7 )]
+
 [node name="UI" type="Control" parent="."]
 margin_right = 1280.0
 margin_bottom = 720.0
@@ -130,8 +170,27 @@ margin_bottom = 70.3132
 custom_fonts/font = SubResource( 4 )
 text = "0"
 script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="body_entered" from="Passwords/passwordsContainer/password" to="Passwords/passwordsContainer/password" method="_on_password_body_entered"]
 [connection signal="coin_collected" from="Passwords/passwordsContainer/password" to="UI/CounterPasswords" method="_on_password_collected"]
 [connection signal="body_entered" from="Passwords/passwordsContainer2/password" to="Passwords/passwordsContainer2/password" method="_on_password_body_entered"]
 [connection signal="coin_collected" from="Passwords/passwordsContainer2/password" to="UI/CounterPasswords" method="_on_password_collected"]
+[connection signal="body_entered" from="Passwords/passwordsContainer3/password" to="Passwords/passwordsContainer3/password" method="_on_password_body_entered"]
+[connection signal="coin_collected" from="Passwords/passwordsContainer3/password" to="UI/CounterPasswords" method="_on_password_collected"]
+[connection signal="body_entered" from="Passwords/passwordsContainer4/password" to="Passwords/passwordsContainer4/password" method="_on_password_body_entered"]
+[connection signal="coin_collected" from="Passwords/passwordsContainer4/password" to="UI/CounterPasswords" method="_on_password_collected"]
+[connection signal="body_entered" from="Passwords/passwordsContainer5/password" to="Passwords/passwordsContainer5/password" method="_on_password_body_entered"]
+[connection signal="coin_collected" from="Passwords/passwordsContainer5/password" to="UI/CounterPasswords" method="_on_password_collected"]
+[connection signal="body_entered" from="Passwords/passwordsContainer6/password" to="Passwords/passwordsContainer6/password" method="_on_password_body_entered"]
+[connection signal="coin_collected" from="Passwords/passwordsContainer6/password" to="UI/CounterPasswords" method="_on_password_collected"]
+[connection signal="body_entered" from="Passwords/passwordsContainer7/password" to="Passwords/passwordsContainer7/password" method="_on_password_body_entered"]
+[connection signal="coin_collected" from="Passwords/passwordsContainer7/password" to="UI/CounterPasswords" method="_on_password_collected"]
+[connection signal="body_entered" from="Passwords/passwordsContainer8/password" to="Passwords/passwordsContainer8/password" method="_on_password_body_entered"]
+[connection signal="coin_collected" from="Passwords/passwordsContainer8/password" to="UI/CounterPasswords" method="_on_password_collected"]
+[connection signal="body_entered" from="Passwords/passwordsContainer9/password" to="Passwords/passwordsContainer9/password" method="_on_password_body_entered"]
+[connection signal="coin_collected" from="Passwords/passwordsContainer9/password" to="UI/CounterPasswords" method="_on_password_collected"]
+[connection signal="body_entered" from="Passwords/passwordsContainer10/password" to="Passwords/passwordsContainer10/password" method="_on_password_body_entered"]
+[connection signal="coin_collected" from="Passwords/passwordsContainer10/password" to="UI/CounterPasswords" method="_on_password_collected"]
