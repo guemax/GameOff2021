@@ -8,3 +8,4 @@ func _ready():
 func _on_password_collected():
 	passwords += 1
 	text = String(passwords)
+	global.collected_passwords += 1
