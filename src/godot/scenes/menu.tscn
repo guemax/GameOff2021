@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://fonts/Poppins/Poppins-Black.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://fonts/Poppins/Poppins-SemiBold.ttf" type="DynamicFontData" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://2d_animations/bug/0007.png" type="Texture" id=9]
 [ext_resource path="res://themes/button.tres" type="StyleBox" id=10]
 [ext_resource path="res://themes/button-hovered.tres" type="StyleBox" id=11]
+[ext_resource path="res://sprites/wall.png" type="Texture" id=12]
 
 [sub_resource type="DynamicFont" id=1]
 size = 80
@@ -27,7 +28,7 @@ length = 12.0
 loop = true
 step = 1.0
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:texture")
+tracks/0/path = NodePath("Bug:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -46,15 +47,20 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 1280.0
-margin_bottom = 720.0
-color = Color( 0, 0.0235294, 0.109804, 1 )
+[node name="Wall" type="Sprite" parent="."]
+position = Vector2( 799.072, 433.703 )
+scale = Vector2( 0.889562, 0.889562 )
+texture = ExtResource( 12 )
+
+[node name="BG" type="ColorRect" parent="."]
+margin_right = 1413.0
+margin_bottom = 821.0
+color = Color( 0, 0.0235294, 0.109804, 0.894118 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="label-title" type="Label" parent="."]
+[node name="LabelTitle" type="Label" parent="."]
 margin_left = 80.0
 margin_right = 1280.0
 margin_bottom = 207.0
@@ -65,7 +71,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="button-credits" type="Button" parent="."]
+[node name="ButtonCredits" type="Button" parent="."]
 margin_left = 80.0
 margin_top = 535.715
 margin_right = 326.0
@@ -81,7 +87,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="button-play" type="Button" parent="."]
+[node name="ButtonPlay" type="Button" parent="."]
 margin_left = 80.0
 margin_top = 417.36
 margin_right = 326.0
@@ -98,13 +104,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 803.371, 331.574 )
-scale = Vector2( 0.722816, 0.722816 )
+[node name="Bug" type="Sprite" parent="."]
+position = Vector2( 828.676, 353.05 )
+scale = Vector2( 0.742239, 0.742239 )
 texture = ExtResource( 5 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "bug-blink"
 anims/bug-blink = SubResource( 3 )
 
-[connection signal="pressed" from="button-play" to="button-play" method="_on_buttonplay_pressed"]
+[connection signal="pressed" from="ButtonPlay" to="ButtonPlay" method="_on_buttonplay_pressed"]
