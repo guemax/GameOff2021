@@ -1,8 +1,19 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=18 format=2]
 
-[ext_resource path="res://fonts/Poppins/Poppins-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://fonts/Poppins/Poppins-Black.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://fonts/Poppins/Poppins-SemiBold.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://scripts/button-play.gd" type="Script" id=3]
+[ext_resource path="res://2d_animations/bug/0002.png" type="Texture" id=4]
+[ext_resource path="res://2d_animations/bug/0001.png" type="Texture" id=5]
+[ext_resource path="res://2d_animations/bug/0003.png" type="Texture" id=6]
+[ext_resource path="res://2d_animations/bug/0005.png" type="Texture" id=7]
+[ext_resource path="res://2d_animations/bug/0006.png" type="Texture" id=8]
+[ext_resource path="res://2d_animations/bug/0007.png" type="Texture" id=9]
+[ext_resource path="res://themes/button.tres" type="StyleBox" id=10]
+[ext_resource path="res://themes/button-hovered.tres" type="StyleBox" id=11]
+[ext_resource path="res://sprites/wall.png" type="Texture" id=12]
+[ext_resource path="res://scripts/button-credits.gd" type="Script" id=13]
+[ext_resource path="res://scripts/button-quit.gd" type="Script" id=14]
 
 [sub_resource type="DynamicFont" id=1]
 size = 80
@@ -13,6 +24,24 @@ font_data = ExtResource( 1 )
 size = 30
 font_data = ExtResource( 2 )
 
+[sub_resource type="Animation" id=3]
+resource_name = "bug-blink"
+length = 12.0
+loop = true
+step = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Bug:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 4, 4.1, 4.2, 4.3, 4.4, 4.5, 4.6, 5, 5.1, 5.2, 5.3, 5.4, 5.5, 5.6, 8, 8.1, 8.2, 8.3, 8.4, 8.5, 8.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 5 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ]
+}
+
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -20,38 +49,40 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 1280.0
-margin_bottom = 720.0
-color = Color( 0, 0.0352941, 0.176471, 1 )
+[node name="Wall" type="Sprite" parent="."]
+position = Vector2( 799.072, 433.703 )
+scale = Vector2( 0.889562, 0.889562 )
+texture = ExtResource( 12 )
+
+[node name="BG" type="ColorRect" parent="."]
+margin_right = 1413.0
+margin_bottom = 821.0
+color = Color( 0, 0.0235294, 0.109804, 0.894118 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="label-title" type="Label" parent="."]
+[node name="LabelTitle" type="Label" parent="."]
 margin_left = 80.0
 margin_right = 1280.0
 margin_bottom = 207.0
 custom_fonts/font = SubResource( 1 )
 text = "Buggy Attack"
 valign = 1
-
-[node name="button-credits" type="Button" parent="."]
-margin_left = 80.0
-margin_top = 535.715
-margin_right = 326.0
-margin_bottom = 606.715
-custom_fonts/font = SubResource( 2 )
-text = "Credits"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="button-play" type="Button" parent="."]
+[node name="ButtonPlay" type="Button" parent="."]
 margin_left = 80.0
-margin_top = 417.36
+margin_top = 344.482
 margin_right = 326.0
-margin_bottom = 488.36
+margin_bottom = 415.482
+mouse_default_cursor_shape = 2
+custom_styles/hover = ExtResource( 11 )
+custom_styles/pressed = ExtResource( 11 )
+custom_styles/focus = ExtResource( 11 )
+custom_styles/normal = ExtResource( 10 )
 custom_fonts/font = SubResource( 2 )
 text = "Play"
 script = ExtResource( 3 )
@@ -59,4 +90,49 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="pressed" from="button-play" to="button-play" method="_on_buttonplay_pressed"]
+[node name="ButtonCredits" type="Button" parent="."]
+margin_left = 80.0
+margin_top = 462.837
+margin_right = 326.0
+margin_bottom = 533.837
+mouse_default_cursor_shape = 2
+custom_styles/hover = ExtResource( 11 )
+custom_styles/pressed = ExtResource( 11 )
+custom_styles/focus = ExtResource( 11 )
+custom_styles/normal = ExtResource( 10 )
+custom_fonts/font = SubResource( 2 )
+text = "Credits"
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonQuit" type="Button" parent="."]
+margin_left = 80.0
+margin_top = 583.192
+margin_right = 326.0
+margin_bottom = 654.192
+mouse_default_cursor_shape = 2
+custom_styles/hover = ExtResource( 11 )
+custom_styles/pressed = ExtResource( 11 )
+custom_styles/focus = ExtResource( 11 )
+custom_styles/normal = ExtResource( 10 )
+custom_fonts/font = SubResource( 2 )
+text = "Quit Game"
+script = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bug" type="Sprite" parent="."]
+position = Vector2( 828.676, 353.05 )
+scale = Vector2( 0.742239, 0.742239 )
+texture = ExtResource( 5 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "bug-blink"
+anims/bug-blink = SubResource( 3 )
+
+[connection signal="pressed" from="ButtonPlay" to="ButtonPlay" method="_on_buttonplay_pressed"]
+[connection signal="pressed" from="ButtonCredits" to="ButtonCredits" method="_on_ButtonCredits_pressed"]
+[connection signal="pressed" from="ButtonQuit" to="ButtonQuit" method="_on_ButtonQuit_pressed"]
