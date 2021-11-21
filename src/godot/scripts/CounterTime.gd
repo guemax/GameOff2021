@@ -2,7 +2,6 @@ extends Label
 
 var time = 0
 var timer_on = false
-var best_time = "01:45"	# Tried it out
 
 func _ready():
 	timer_on = true

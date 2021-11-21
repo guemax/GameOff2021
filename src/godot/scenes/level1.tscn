@@ -98,6 +98,7 @@ visible = false
 
 [node name="Solution" type="Sprite3D" parent="."]
 transform = Transform( 35, 0, 0, 0, -1.5299e-06, -35, 0, 35, -1.5299e-06, 0, 1.01389, 0 )
+visible = false
 texture = ExtResource( 6 )
 
 [node name="Passwords" type="Spatial" parent="."]
@@ -205,10 +206,10 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Area" type="Area" parent="."]
+[node name="End" type="Area" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.42037, 0, -33.1349 )
 
-[node name="CollisionShape" type="CollisionShape" parent="Area"]
+[node name="CollisionShape" type="CollisionShape" parent="End"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.160875, 2.57113, 0 )
 shape = SubResource( 5 )
 
@@ -232,5 +233,5 @@ shape = SubResource( 5 )
 [connection signal="coin_collected" from="Passwords/passwordsContainer9/password" to="UI/CounterPasswords" method="_on_password_collected"]
 [connection signal="body_entered" from="Passwords/passwordsContainer10/password" to="Passwords/passwordsContainer10/password" method="_on_password_body_entered"]
 [connection signal="coin_collected" from="Passwords/passwordsContainer10/password" to="UI/CounterPasswords" method="_on_password_collected"]
-[connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
-[connection signal="body_entered" from="Area" to="UI/CounterTime" method="_on_Area_body_entered"]
+[connection signal="body_entered" from="End" to="." method="_on_Area_body_entered"]
+[connection signal="body_entered" from="End" to="UI/CounterTime" method="_on_Area_body_entered"]
