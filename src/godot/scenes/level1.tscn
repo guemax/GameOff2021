@@ -43,6 +43,7 @@ script = ExtResource( 11 )
 [node name="Floor" type="StaticBody" parent="."]
 
 [node name="MeshInstance" type="MeshInstance" parent="Floor"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0804238, 0.00188732, -0.0202332 )
 mesh = SubResource( 2 )
 material/0 = null
 
@@ -92,6 +93,7 @@ __meta__ = {
 
 [node name="DebugLight" type="DirectionalLight" parent="."]
 transform = Transform( 0.0349555, 0.999202, -0.0193212, -0.874505, 0.0399399, 0.48337, 0.483756, 0, 0.875203, -38.5162, 21.7941, 0 )
+visible = false
 
 [node name="Solution" type="Sprite3D" parent="."]
 transform = Transform( 35, 0, 0, 0, -1.5299e-06, -35, 0, 35, -1.5299e-06, 0, 1.01389, 0 )
@@ -209,6 +211,14 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.42037, 0, -33.1349 )
 [node name="CollisionShape" type="CollisionShape" parent="End"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.160875, 2.57113, 0 )
 shape = SubResource( 5 )
+
+[node name="OmniLight" type="OmniLight" parent="End"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.92385, 0.761539 )
+light_color = Color( 0.74902, 0.839216, 1, 1 )
+light_energy = 3.42
+shadow_enabled = true
+omni_range = 6.2
+omni_attenuation = 1.7411
 
 [node name="TransitionScreen" parent="." instance=ExtResource( 12 )]
 
