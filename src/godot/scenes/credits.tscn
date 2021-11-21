@@ -1,0 +1,124 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://fonts/Poppins/Poppins-Black.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://fonts/Poppins/Poppins-SemiBold.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://scripts/button-back.gd" type="Script" id=3]
+[ext_resource path="res://fonts/regular-font.tres" type="DynamicFont" id=4]
+[ext_resource path="res://themes/button.tres" type="StyleBox" id=10]
+[ext_resource path="res://themes/button-hovered.tres" type="StyleBox" id=11]
+[ext_resource path="res://sprites/wall.png" type="Texture" id=12]
+
+[sub_resource type="DynamicFont" id=1]
+size = 80
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 30
+use_filter = true
+font_data = ExtResource( 2 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Wall" type="Sprite" parent="."]
+position = Vector2( 799.072, 433.703 )
+scale = Vector2( 0.889562, 0.889562 )
+texture = ExtResource( 12 )
+
+[node name="BG" type="ColorRect" parent="."]
+margin_right = 1413.0
+margin_bottom = 821.0
+color = Color( 0, 0.0235294, 0.109804, 0.894118 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelTitle" type="Label" parent="."]
+margin_left = 80.0
+margin_right = 1280.0
+margin_bottom = 207.0
+custom_fonts/font = SubResource( 1 )
+text = "Credits"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonBack" type="Button" parent="."]
+margin_left = 80.0
+margin_top = 583.192
+margin_right = 326.0
+margin_bottom = 654.192
+mouse_default_cursor_shape = 2
+custom_styles/hover = ExtResource( 11 )
+custom_styles/pressed = ExtResource( 11 )
+custom_styles/focus = ExtResource( 11 )
+custom_styles/normal = ExtResource( 10 )
+custom_fonts/font = SubResource( 2 )
+text = "Back"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits" type="ScrollContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 555.0
+margin_top = 192.0
+margin_right = -40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Credits"]
+margin_right = 673.0
+margin_bottom = 552.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="title" type="Label" parent="Credits/VBoxContainer"]
+margin_right = 673.0
+margin_bottom = 89.0
+custom_fonts/font = SubResource( 3 )
+text = "Resources:
+"
+autowrap = true
+
+[node name="textures" type="Label" parent="Credits/VBoxContainer"]
+margin_top = 93.0
+margin_right = 673.0
+margin_bottom = 228.0
+custom_fonts/font = ExtResource( 4 )
+text = "Textures by Polyhaven: https://polyhaven.com/textures
+"
+autowrap = true
+
+[node name="labyrinth" type="Label" parent="Credits/VBoxContainer"]
+margin_top = 232.0
+margin_right = 673.0
+margin_bottom = 367.0
+custom_fonts/font = ExtResource( 4 )
+text = "Labyrinth layout by Maze Generator: https://www.mazegenerator.net/
+"
+autowrap = true
+
+[node name="fonts" type="Label" parent="Credits/VBoxContainer"]
+margin_top = 371.0
+margin_right = 673.0
+margin_bottom = 552.0
+custom_fonts/font = ExtResource( 4 )
+text = "Font (Poppins) from Google Fonts: https://fonts.google.com/specimen/Poppins?query=Poppins
+"
+autowrap = true
+
+[connection signal="pressed" from="ButtonBack" to="ButtonBack" method="_on_Buttonback_pressed"]
