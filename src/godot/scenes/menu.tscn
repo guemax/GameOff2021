@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://fonts/Poppins/Poppins-Black.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://fonts/Poppins/Poppins-SemiBold.ttf" type="DynamicFontData" id=2]
@@ -12,6 +12,8 @@
 [ext_resource path="res://themes/button.tres" type="StyleBox" id=10]
 [ext_resource path="res://themes/button-hovered.tres" type="StyleBox" id=11]
 [ext_resource path="res://sprites/wall.png" type="Texture" id=12]
+[ext_resource path="res://scripts/button-credits.gd" type="Script" id=13]
+[ext_resource path="res://scripts/button-quit.gd" type="Script" id=14]
 
 [sub_resource type="DynamicFont" id=1]
 size = 80
@@ -71,27 +73,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ButtonCredits" type="Button" parent="."]
-margin_left = 80.0
-margin_top = 535.715
-margin_right = 326.0
-margin_bottom = 606.715
-mouse_default_cursor_shape = 2
-custom_styles/hover = ExtResource( 11 )
-custom_styles/pressed = ExtResource( 11 )
-custom_styles/focus = ExtResource( 11 )
-custom_styles/normal = ExtResource( 10 )
-custom_fonts/font = SubResource( 2 )
-text = "Credits"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="ButtonPlay" type="Button" parent="."]
 margin_left = 80.0
-margin_top = 417.36
+margin_top = 344.482
 margin_right = 326.0
-margin_bottom = 488.36
+margin_bottom = 415.482
 mouse_default_cursor_shape = 2
 custom_styles/hover = ExtResource( 11 )
 custom_styles/pressed = ExtResource( 11 )
@@ -100,6 +86,40 @@ custom_styles/normal = ExtResource( 10 )
 custom_fonts/font = SubResource( 2 )
 text = "Play"
 script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonCredits" type="Button" parent="."]
+margin_left = 80.0
+margin_top = 462.837
+margin_right = 326.0
+margin_bottom = 533.837
+mouse_default_cursor_shape = 2
+custom_styles/hover = ExtResource( 11 )
+custom_styles/pressed = ExtResource( 11 )
+custom_styles/focus = ExtResource( 11 )
+custom_styles/normal = ExtResource( 10 )
+custom_fonts/font = SubResource( 2 )
+text = "Credits"
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonQuit" type="Button" parent="."]
+margin_left = 80.0
+margin_top = 583.192
+margin_right = 326.0
+margin_bottom = 654.192
+mouse_default_cursor_shape = 2
+custom_styles/hover = ExtResource( 11 )
+custom_styles/pressed = ExtResource( 11 )
+custom_styles/focus = ExtResource( 11 )
+custom_styles/normal = ExtResource( 10 )
+custom_fonts/font = SubResource( 2 )
+text = "Quit Game"
+script = ExtResource( 14 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -114,3 +134,5 @@ autoplay = "bug-blink"
 anims/bug-blink = SubResource( 3 )
 
 [connection signal="pressed" from="ButtonPlay" to="ButtonPlay" method="_on_buttonplay_pressed"]
+[connection signal="pressed" from="ButtonCredits" to="ButtonCredits" method="_on_ButtonCredits_pressed"]
+[connection signal="pressed" from="ButtonQuit" to="ButtonQuit" method="_on_ButtonQuit_pressed"]
