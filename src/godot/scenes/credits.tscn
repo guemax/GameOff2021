@@ -70,7 +70,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ScrollContainer" type="ScrollContainer" parent="."]
+[node name="Credits" type="ScrollContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 555.0
@@ -80,13 +80,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Credits"]
 margin_right = 673.0
 margin_bottom = 552.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="title" type="Label" parent="ScrollContainer/VBoxContainer"]
+[node name="title" type="Label" parent="Credits/VBoxContainer"]
 margin_right = 673.0
 margin_bottom = 89.0
 custom_fonts/font = SubResource( 3 )
@@ -94,7 +94,7 @@ text = "Resources:
 "
 autowrap = true
 
-[node name="textures" type="Label" parent="ScrollContainer/VBoxContainer"]
+[node name="textures" type="Label" parent="Credits/VBoxContainer"]
 margin_top = 93.0
 margin_right = 673.0
 margin_bottom = 228.0
@@ -103,7 +103,7 @@ text = "Textures by Polyhaven: https://polyhaven.com/textures
 "
 autowrap = true
 
-[node name="labyrinth" type="Label" parent="ScrollContainer/VBoxContainer"]
+[node name="labyrinth" type="Label" parent="Credits/VBoxContainer"]
 margin_top = 232.0
 margin_right = 673.0
 margin_bottom = 367.0
@@ -112,7 +112,7 @@ text = "Labyrinth layout by Maze Generator: https://www.mazegenerator.net/
 "
 autowrap = true
 
-[node name="fonts" type="Label" parent="ScrollContainer/VBoxContainer"]
+[node name="fonts" type="Label" parent="Credits/VBoxContainer"]
 margin_top = 371.0
 margin_right = 673.0
 margin_bottom = 552.0
