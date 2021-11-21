@@ -21,7 +21,7 @@ func _ready():
 	# Set max number of passwords
 	$passwords/title/value.text = "0 of " + String(all_passwords)
 	
-	yield(get_tree().create_timer(1.0), "timeout")
+	yield(get_tree().create_timer(3.0), "timeout")
 	count_passwords_up(0)
 	count_time_up(0)
 	
