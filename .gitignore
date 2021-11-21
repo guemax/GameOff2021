@@ -7,3 +7,6 @@ src/godot/export_presets.cfg
 # Mono-specific ignores
 src/godot/.mono/
 src/godot/data_*/
+
+# Builds directory for exported games
+src/builds
