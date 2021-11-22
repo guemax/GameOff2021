@@ -5,13 +5,13 @@
 ![GitHub closed issues](https://img.shields.io/github/issues-closed/guemax/GameOff2021)
 ![GitHub top language](https://img.shields.io/github/languages/top/guemax/GameOff2021)
 
-This is my repository for the game I make for the Game Off 2021. It will be using Godot 3.3.4 and Blender 2.93. During developing, I had the idea of calling my game "Buggy Attack". The name might still be modified.
+This is my repository for the game I make for the Game Off 2021. I'm using Godot 3.3.4 and Blender 2.93 for creating it. During developing, I had the idea of calling my game "Buggy Attack". The name might still be modified.
 
 Link to the game jam: https://itch.io/jam/game-off-2021
 
 ## The idea
 
-Before doing anything, I like to write a spec. This keeps me focused when working,
+Before doing anything, I like to write a spec. This keeps me focused while working,
 and other people know what I'm building when the software (or the game) is not completed yet.
 This is my idea for the game, on the topic of bugs:
 
