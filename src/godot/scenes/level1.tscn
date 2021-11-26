@@ -24,10 +24,10 @@ uv1_triplanar = true
 
 [sub_resource type="CubeMesh" id=2]
 material = SubResource( 1 )
-size = Vector3( 60, 2, 80 )
+size = Vector3( 80, 2, 100 )
 
 [sub_resource type="BoxShape" id=3]
-extents = Vector3( 25, 1, 25 )
+extents = Vector3( 40, 1, 50 )
 
 [sub_resource type="DynamicFont" id=4]
 size = 30
@@ -65,6 +65,9 @@ omni_attenuation = 1.7411
 
 [node name="CameraTarget" type="Spatial" parent="Bug"]
 transform = Transform( -4.37114e-08, 0.825251, -0.564765, 0, 0.564765, 0.825251, 1, 3.60729e-08, -2.46867e-08, -1.98179, 3.16668, -8.66267e-08 )
+
+[node name="MapTarget" type="Spatial" parent="Bug"]
+transform = Transform( -4.37114e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, 4.37114e-08, 1.91069e-15, 0, 17.1233, 0 )
 
 [node name="BlueLight" type="DirectionalLight" parent="."]
 transform = Transform( 0.696289, 0.450855, -0.558491, 0, 0.778101, 0.62814, 0.717762, -0.437367, 0.541783, -13.2588, 29.9696, 33.3632 )
@@ -221,6 +224,44 @@ omni_range = 6.2
 omni_attenuation = 1.7411
 
 [node name="TransitionScreen" parent="." instance=ExtResource( 12 )]
+
+[node name="Map" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Border" type="ColorRect" parent="Map"]
+margin_left = 35.0
+margin_top = 493.0
+margin_right = 225.0
+margin_bottom = 683.0
+color = Color( 0.152941, 0.207843, 0.239216, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MapViewportContainer" type="ViewportContainer" parent="Map"]
+margin_left = 40.0
+margin_top = 498.088
+margin_right = 219.0
+margin_bottom = 677.089
+stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Viewport" type="Viewport" parent="Map/MapViewportContainer"]
+size = Vector2( 179, 179 )
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="InterpolatedCamera" type="InterpolatedCamera" parent="Map/MapViewportContainer/Viewport"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -2.46004, 11.538, 32.7667 )
+target = NodePath("../../../../Bug/MapTarget")
+speed = 4.0
+enabled = true
 
 [connection signal="body_entered" from="Passwords/passwordsContainer/password" to="Passwords/passwordsContainer/password" method="_on_password_body_entered"]
 [connection signal="coin_collected" from="Passwords/passwordsContainer/password" to="UI/CounterPasswords" method="_on_password_collected"]
