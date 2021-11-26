@@ -7,3 +7,5 @@ src/godot/export_presets.cfg
 # Mono-specific ignores
 src/godot/.mono/
 src/godot/data_*/
+
+src/builds/*
