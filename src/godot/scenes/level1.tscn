@@ -1,7 +1,6 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=17 format=2]
 
-[ext_resource path="res://textures/metal-plate/metal_plate_disp_2k.png" type="Texture" id=1]
-[ext_resource path="res://textures/metal-plate/metal_plate_rough_2k.jpg" type="Texture" id=2]
+[ext_resource path="res://textures/floor-material.tres" type="Material" id=1]
 [ext_resource path="res://assets/bug.tscn" type="PackedScene" id=3]
 [ext_resource path="res://new_environment.tres" type="Environment" id=4]
 [ext_resource path="res://assets/wall-library.tres" type="MeshLibrary" id=5]
@@ -12,18 +11,10 @@
 [ext_resource path="res://scripts/CounterTime.gd" type="Script" id=10]
 [ext_resource path="res://scripts/level1.gd" type="Script" id=11]
 [ext_resource path="res://assets/TransitionScreen.tscn" type="PackedScene" id=12]
-
-[sub_resource type="SpatialMaterial" id=1]
-albedo_color = Color( 0.345098, 0.411765, 0.478431, 1 )
-roughness_texture = ExtResource( 2 )
-normal_enabled = true
-normal_scale = 2.2
-normal_texture = ExtResource( 1 )
-uv1_scale = Vector3( 0.5, 0.5, 0.5 )
-uv1_triplanar = true
+[ext_resource path="res://assets/target-zone.tscn" type="PackedScene" id=13]
 
 [sub_resource type="CubeMesh" id=2]
-material = SubResource( 1 )
+material = ExtResource( 1 )
 size = Vector3( 80, 2, 100 )
 
 [sub_resource type="BoxShape" id=3]
@@ -216,11 +207,51 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.160875, 2.57113, 0 )
 shape = SubResource( 5 )
 
 [node name="OmniLight" type="OmniLight" parent="End"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.92385, 0.761539 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.08543, 8.57284 )
 light_color = Color( 0.74902, 0.839216, 1, 1 )
 light_energy = 3.42
 shadow_enabled = true
-omni_range = 6.2
+omni_range = 4.1
+omni_attenuation = 1.7411
+
+[node name="OmniLight2" type="OmniLight" parent="End"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.08543, 5.91667 )
+light_color = Color( 0.74902, 0.839216, 1, 1 )
+light_energy = 3.42
+shadow_enabled = true
+omni_range = 4.1
+omni_attenuation = 1.7411
+
+[node name="OmniLight3" type="OmniLight" parent="End"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.08543, 3.31267 )
+light_color = Color( 0.74902, 0.839216, 1, 1 )
+light_energy = 3.42
+shadow_enabled = true
+omni_range = 4.1
+omni_attenuation = 1.7411
+
+[node name="OmniLight4" type="OmniLight" parent="End"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.08543, 1.12681 )
+light_color = Color( 0.74902, 0.839216, 1, 1 )
+light_energy = 3.42
+shadow_enabled = true
+omni_range = 4.1
+omni_attenuation = 1.7411
+
+[node name="OmniLight5" type="OmniLight" parent="End"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.08543, -1.1818 )
+light_color = Color( 0.74902, 0.839216, 1, 1 )
+light_energy = 3.42
+shadow_enabled = true
+omni_range = 4.1
+omni_attenuation = 1.7411
+
+[node name="OmniLight6" type="OmniLight" parent="End"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.08543, -3.50611 )
+light_color = Color( 0.74902, 0.839216, 1, 1 )
+light_energy = 3.42
+shadow_enabled = true
+omni_range = 4.1
 omni_attenuation = 1.7411
 
 [node name="TransitionScreen" parent="." instance=ExtResource( 12 )]
@@ -262,6 +293,9 @@ transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -2.4600
 target = NodePath("../../../../Bug/MapTarget")
 speed = 4.0
 enabled = true
+
+[node name="target-zone" parent="." instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.50253, 1.87703, -32.1434 )
 
 [connection signal="body_entered" from="Passwords/passwordsContainer/password" to="Passwords/passwordsContainer/password" method="_on_password_body_entered"]
 [connection signal="coin_collected" from="Passwords/passwordsContainer/password" to="UI/CounterPasswords" method="_on_password_collected"]
