@@ -12,10 +12,6 @@ var is_rotating = false
 onready var state_machine = $AnimationTree.get("parameters/playback")
 onready var pivot = $pivot
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
 func _physics_process(delta: float) -> void:
 	velocity = Vector3()
 	is_rotating = false
