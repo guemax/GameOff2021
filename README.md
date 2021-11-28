@@ -20,7 +20,7 @@ This is my idea for the game, on the topic of bugs:
 
 ## How to play
 
-This game is currently in development and has no binaries yet. So if you would like to play it now (you could also wait until I publish a binary), download the source code and open the project in Godot.
+This game is currently in development and has only pre-releases (for Windows) yet. So if you would like to play it now, donwload the latest development executable [here](https://github.com/guemax/GameOff2021/releases) and run it.
 
 ### How to control the bug
 
