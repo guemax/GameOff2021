@@ -87,6 +87,7 @@ __meta__ = {
 
 [node name="DebugLight" type="DirectionalLight" parent="."]
 transform = Transform( 0.0349555, 0.999202, -0.0193212, -0.874505, 0.0399399, 0.48337, 0.483756, 0, 0.875203, -38.5162, 21.7941, 0 )
+visible = false
 
 [node name="Solution" type="Sprite3D" parent="."]
 transform = Transform( 35, 0, 0, 0, -1.5299e-06, -35, 0, 35, -1.5299e-06, 0, 1.01389, 0 )
