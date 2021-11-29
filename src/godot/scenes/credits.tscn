@@ -82,7 +82,7 @@ __meta__ = {
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Credits"]
 margin_right = 673.0
-margin_bottom = 552.0
+margin_bottom = 968.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
@@ -118,6 +118,24 @@ margin_right = 673.0
 margin_bottom = 552.0
 custom_fonts/font = ExtResource( 4 )
 text = "Font (Poppins) from Google Fonts: https://fonts.google.com/specimen/Poppins?query=Poppins
+"
+autowrap = true
+
+[node name="music" type="Label" parent="Credits/VBoxContainer"]
+margin_top = 556.0
+margin_right = 673.0
+margin_bottom = 783.0
+custom_fonts/font = ExtResource( 4 )
+text = "Music from ProductionCrate https://sfx.productioncrate.com/royalty-free-music/soundscrate-scifi-atmospheric-track-1: 
+"
+autowrap = true
+
+[node name="sound_effects" type="Label" parent="Credits/VBoxContainer"]
+margin_top = 787.0
+margin_right = 673.0
+margin_bottom = 968.0
+custom_fonts/font = ExtResource( 4 )
+text = "Sound effects from ProductionCrate https://sfx.productioncrate.com/sound-effects/soundscrate-coin-01
 "
 autowrap = true
 

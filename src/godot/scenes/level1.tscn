@@ -1,6 +1,7 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://textures/floor-material.tres" type="Material" id=1]
+[ext_resource path="res://music/soundscrate-scifi-atmospheric-track-1.mp3" type="AudioStream" id=2]
 [ext_resource path="res://assets/bug.tscn" type="PackedScene" id=3]
 [ext_resource path="res://new_environment.tres" type="Environment" id=4]
 [ext_resource path="res://assets/wall-library.tres" type="MeshLibrary" id=5]
@@ -346,6 +347,11 @@ enabled = true
 
 [node name="target-zone" parent="." instance=ExtResource( 13 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.50253, 1.87703, -32.1434 )
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = -15.0
+autoplay = true
 
 [connection signal="body_entered" from="Passwords/passwordsContainer/password" to="Passwords/passwordsContainer/password" method="_on_password_body_entered"]
 [connection signal="coin_collected" from="Passwords/passwordsContainer/password" to="UI/CounterPasswords" method="_on_password_collected"]

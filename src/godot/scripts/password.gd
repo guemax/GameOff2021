@@ -5,6 +5,7 @@ signal coin_collected
 func _on_password_body_entered(body):
 	if body.name == "Bug":
 		$AnimationPlayer.play("shrink")
+		$SoundPasswordCollected.play()
 		$Timer.start()
 
 func _on_Timer_timeout():

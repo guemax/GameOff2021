@@ -10,3 +10,8 @@ src/godot/data_*/
 
 # Builds directory for exported games
 src/builds/*
+
+# Don't include the music and sound effects to not
+# violate the copyright
+src/godot/music/*
+src/godot/sound_effects/*
