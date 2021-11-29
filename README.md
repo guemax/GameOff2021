@@ -36,6 +36,10 @@ For controlling the movement of the bug, press the following keys:
 | Up arrow    | Move forwards  |
 | Down arrow  | Move backwards |
 
+### Other useful infos
+
+Press <kbd>escape</kbd> to open the pause menu in the main level. You can then restart the game, go to the main menu (quit the game) or continue playing.
+
 ## Credits
 
 Badges by [Shields](https://shields.io)  
