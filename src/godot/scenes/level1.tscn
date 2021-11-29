@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://textures/floor-material.tres" type="Material" id=1]
 [ext_resource path="res://music/soundscrate-scifi-atmospheric-track-1.mp3" type="AudioStream" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://scripts/level1.gd" type="Script" id=11]
 [ext_resource path="res://assets/TransitionScreen.tscn" type="PackedScene" id=12]
 [ext_resource path="res://assets/target-zone.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scenes/pause-menu.tscn" type="PackedScene" id=14]
 
 [sub_resource type="CubeMesh" id=1]
 material = ExtResource( 1 )
@@ -352,6 +353,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.50253, 1.87703, -32.1434 )
 stream = ExtResource( 2 )
 volume_db = -15.0
 autoplay = true
+
+[node name="Control" parent="." instance=ExtResource( 14 )]
 
 [connection signal="body_entered" from="Passwords/passwordsContainer/password" to="Passwords/passwordsContainer/password" method="_on_password_body_entered"]
 [connection signal="coin_collected" from="Passwords/passwordsContainer/password" to="UI/CounterPasswords" method="_on_password_collected"]
