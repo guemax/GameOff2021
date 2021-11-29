@@ -38,7 +38,9 @@ For controlling the movement of the bug, press the following keys:
 Badges by [Shields](https://shields.io)  
 Textures by [Polyhaven](https://polyhaven.com/textures)  
 Labyrinth layout by [Maze Generator](https://www.mazegenerator.net/)  
-Font (Poppins) from [Google Fonts](https://fonts.google.com/specimen/Poppins?query=Poppins#about)
+Font (Poppins) from [Google Fonts](https://fonts.google.com/specimen/Poppins?query=Poppins#about)  
+Music (SciFi Atmospheric Track) from [ProductionCrate](https://sfx.productioncrate.com/royalty-free-music/soundscrate-scifi-atmospheric-track-1)  
+Sound effects (Coin 01) from [ProductionCrate](https://sfx.productioncrate.com/sound-effects/soundscrate-coin-01)
 
 ## License
 
