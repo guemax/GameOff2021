@@ -1,13 +1,12 @@
 extends Label
 
 var time = 0
-var timer_on = false
 
 func _ready():
-	timer_on = true
+	global.timer_on = true
 
 func _process(delta):
-	if (timer_on):
+	if (global.timer_on):
 		time += delta
 	
 	var seconds = fmod(time, 60)
@@ -18,5 +17,5 @@ func _process(delta):
 
 func _on_Area_body_entered(body):
 	if body.name == "Bug":
-		timer_on = false
+		global.timer_on = false
 		global.time = time
