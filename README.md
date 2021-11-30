@@ -7,7 +7,8 @@
 
 This is my repository for the game I make for the Game Off 2021. I'm using Godot 3.3.4 and Blender 2.93 for creating it. During developing, I had the idea of calling my game "Buggy Attack". The name might still be modified.
 
-Link to the game jam: https://itch.io/jam/game-off-2021
+Link to the game jam: https://itch.io/jam/game-off-2021  
+Link to the website of my game: https://guemax.itch.io/buggy-attack
 
 ## The idea
 
