@@ -41,6 +41,16 @@ For controlling the movement of the bug, press the following keys:
 
 Press <kbd>escape</kbd> to open the pause menu in the main level. You can then restart the game, go to the main menu (quit the game) or continue playing.
 
+## Downloading the source code and running in Godot
+
+If you would like to run the game with Godot and not using one of the binaries, you might run into some problems.  
+Because I was not able to include the sound tracks in this repository (due to copyrights), I only have them locally on my computer.
+This will of course lead to some errors when Godot cannot find these files.
+
+The best option is registering on [ProductionCrate](https://www.productioncrate.com/register/) (it's free!) and downloading the music files shown in the [credits](https://github.com/guemax/GameOff2021#credits) section down below.
+
+Create two new folders under `src/godot`. Name the first one `music` and the second one `sound_effects`. Then move all files from ProductionCrate into the `music` folder except of `soundscrate-coin-01.mp3`, this file should be moved to `sound_effects`. Make sure you leave the filename as it is and don't rename the files.
+
 ## Credits
 
 Badges by [Shields](https://shields.io)  
