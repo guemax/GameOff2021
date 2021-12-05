@@ -8,6 +8,7 @@ src/godot/export_presets.cfg
 src/godot/.mono/
 src/godot/data_*/
 
+# Builds directory for exported games
 src/builds/*
 
 # Don't include the music and sound effects to not
