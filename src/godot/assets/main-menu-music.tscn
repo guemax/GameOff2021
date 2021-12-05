@@ -1,10 +1,19 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://music/soundscrate-outer-world.mp3" type="AudioStream" id=1]
-[ext_resource path="res://scripts/main-menu-music-player.gd" type="Script" id=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends AudioStreamPlayer
+#
+#func _ready():
+#	play()
+#
+#func stop_music_from_playing():
+#	stop()
+"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer"]
 stream = ExtResource( 1 )
 volume_db = -7.0
 autoplay = true
-script = ExtResource( 2 )
+script = SubResource( 1 )
