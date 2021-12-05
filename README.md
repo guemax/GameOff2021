@@ -24,7 +24,7 @@ The option for marking places where you have already been has also been removed 
 
 ## How to play
 
-This game is currently in development and has only pre-releases (for Windows) yet. So if you would like to play it now, donwload the latest development executable [here](https://github.com/guemax/GameOff2021/releases) and run it.
+This game is currently in development and has only pre-releases (for Windows) yet. So if you would like to play it now, download the latest development executable [here](https://github.com/guemax/GameOff2021/releases) and run it.
 
 ### How to control the bug
 
