@@ -4,8 +4,8 @@ export var speed := 1.5
 export var gravity := 70
 export var jump_impulse := 25
 
-var lerp_spin_speed = 0.09
-var spin = 0.10  # rotation speed
+var lerp_weight = 0.09
+var rotation_speed = 0.10
 var velocity = Vector3.ZERO
 var is_rotating = false
 
@@ -23,16 +23,16 @@ func _physics_process(delta: float) -> void:
 	
 	# Handles rotating the bug when pressing left or right arrow key	
 	if Input.is_action_pressed("ui_left") and Input.is_action_pressed("ui_down"):
-		rotate_y(-lerp(0, spin, lerp_spin_speed))
+		rotate_y(-lerp(0, rotation_speed, lerp_weight))
 		is_rotating = true
 	elif Input.is_action_pressed("ui_left"):
-		rotate_y(lerp(0, spin, lerp_spin_speed))
+		rotate_y(lerp(0, rotation_speed, lerp_weight))
 		is_rotating = true
 	elif Input.is_action_pressed("ui_right") and Input.is_action_pressed("ui_down"):
-		rotate_y(lerp(0, spin, lerp_spin_speed))
+		rotate_y(lerp(0, rotation_speed, lerp_weight))
 		is_rotating = true
 	elif Input.is_action_pressed("ui_right"):
-		rotate_y(-lerp(0, spin, lerp_spin_speed))
+		rotate_y(-lerp(0, rotation_speed, lerp_weight))
 		is_rotating = true
 	
 	# if BUG IS MOVING OR ROTATING
