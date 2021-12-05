@@ -20,6 +20,7 @@ config/windows_native_icon="res://icons/Bug-alpha-BG.ico"
 
 global="*res://scripts/global_values.gd"
 TransitionScreen="*res://assets/TransitionScreen.tscn"
+main_menu_music="*res://assets/main-menu-music.tscn"
 
 [display]
 

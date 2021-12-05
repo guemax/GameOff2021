@@ -134,5 +134,6 @@ autoplay = "bug-blink"
 anims/bug-blink = SubResource( 3 )
 
 [connection signal="pressed" from="ButtonPlay" to="ButtonPlay" method="_on_buttonplay_pressed"]
+[connection signal="pressed" from="ButtonPlay" to="ButtonPlay" method="_on_ButtonPlay_pressed_stop_music"]
 [connection signal="pressed" from="ButtonCredits" to="ButtonCredits" method="_on_ButtonCredits_pressed"]
 [connection signal="pressed" from="ButtonQuit" to="ButtonQuit" method="_on_ButtonQuit_pressed"]
