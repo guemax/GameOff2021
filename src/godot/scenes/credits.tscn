@@ -53,6 +53,17 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Label" type="Label" parent="."]
+margin_left = 80.0
+margin_top = 192.0
+margin_right = 506.0
+margin_bottom = 325.0
+custom_fonts/font = ExtResource( 4 )
+text = "Copyright © 2021 by guemax"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="ButtonBack" type="Button" parent="."]
 margin_left = 80.0
 margin_top = 583.192
