@@ -82,7 +82,7 @@ __meta__ = {
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Credits"]
 margin_right = 673.0
-margin_bottom = 968.0
+margin_bottom = 922.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
@@ -124,18 +124,18 @@ autowrap = true
 [node name="music" type="Label" parent="Credits/VBoxContainer"]
 margin_top = 556.0
 margin_right = 673.0
-margin_bottom = 783.0
+margin_bottom = 737.0
 custom_fonts/font = ExtResource( 4 )
-text = "Music from ProductionCrate https://sfx.productioncrate.com/royalty-free-music/soundscrate-scifi-atmospheric-track-1: 
+text = "Music and sound effects from ProductionCrate: https://sfx.productioncrate.com 
 "
 autowrap = true
 
-[node name="sound_effects" type="Label" parent="Credits/VBoxContainer"]
-margin_top = 787.0
+[node name="all_credits" type="Label" parent="Credits/VBoxContainer"]
+margin_top = 741.0
 margin_right = 673.0
-margin_bottom = 968.0
+margin_bottom = 922.0
 custom_fonts/font = ExtResource( 4 )
-text = "Sound effects from ProductionCrate https://sfx.productioncrate.com/sound-effects/soundscrate-coin-01
+text = "See https://github.com/guemax/GameOff2021#readme for a full list of all sound tracks
 "
 autowrap = true
 
