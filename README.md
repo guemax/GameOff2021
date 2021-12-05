@@ -46,9 +46,13 @@ Press <kbd>escape</kbd> to open the pause menu in the main level. You can then r
 Badges by [Shields](https://shields.io)  
 Textures by [Polyhaven](https://polyhaven.com/textures)  
 Labyrinth layout by [Maze Generator](https://www.mazegenerator.net/)  
-Font (Poppins) from [Google Fonts](https://fonts.google.com/specimen/Poppins?query=Poppins#about)  
-Music (SciFi Atmospheric Track) from [ProductionCrate](https://sfx.productioncrate.com/royalty-free-music/soundscrate-scifi-atmospheric-track-1)  
-Sound effects (Coin 01) from [ProductionCrate](https://sfx.productioncrate.com/sound-effects/soundscrate-coin-01)
+Font (Poppins) from [Google Fonts](https://fonts.google.com/specimen/Poppins?query=Poppins#about)
+
+Sound effects and music from [ProductionCrate]():
+
+- [SciFi Atmospheric Track](https://sfx.productioncrate.com/royalty-free-music/soundscrate-scifi-atmospheric-track-1)
+- [Outer World](https://sfx.productioncrate.com/royalty-free-music/soundscrate-outer-world)
+- [Coin 01](https://sfx.productioncrate.com/sound-effects/soundscrate-coin-01)
 
 ## License
 
