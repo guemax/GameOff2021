@@ -135,7 +135,7 @@ margin_top = 741.0
 margin_right = 673.0
 margin_bottom = 922.0
 custom_fonts/font = ExtResource( 4 )
-text = "See https://github.com/guemax/GameOff2021#readme for a full list of all sound tracks
+text = "See https://github.com/guemax/GameOff2021#readme for a detailed list of all sound tracks
 "
 autowrap = true
 
