@@ -1,5 +1,8 @@
 extends Control
 
+func _ready():
+	global.pause_menu_opened = false
+
 func show_pause_menu():
 	$AnimationPlayer.play("fade-in")
 	global.pause_menu_opened = true
