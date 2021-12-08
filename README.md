@@ -37,9 +37,10 @@ For controlling the movement of the bug, press the following keys:
 | Up arrow    | Move forwards  |
 | Down arrow  | Move backwards |
 
-### Other useful infos
+### Other useful keyboard shortcuts
 
 Press <kbd>escape</kbd> to open the pause menu in the main level. You can then restart the game, go to the main menu (quit the game) or continue playing.
+You can also press <kbd>9</kbd> to open or close the small topdown view in the bottom left corner.
 
 ## Downloading the source code and running in Godot
 
