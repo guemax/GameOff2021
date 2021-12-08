@@ -354,7 +354,7 @@ stream = ExtResource( 2 )
 volume_db = -15.0
 autoplay = true
 
-[node name="Control" parent="." instance=ExtResource( 14 )]
+[node name="PauseMenu" parent="." instance=ExtResource( 14 )]
 
 [connection signal="body_entered" from="Passwords/passwordsContainer/password" to="Passwords/passwordsContainer/password" method="_on_password_body_entered"]
 [connection signal="coin_collected" from="Passwords/passwordsContainer/password" to="UI/CounterPasswords" method="_on_password_collected"]
