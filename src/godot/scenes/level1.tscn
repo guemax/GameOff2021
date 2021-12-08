@@ -409,6 +409,5 @@ autoplay = true
 [connection signal="coin_collected" from="Passwords/passwordsContainer19/password" to="UI/CounterPasswords" method="_on_password_collected"]
 [connection signal="body_entered" from="Passwords/passwordsContainer20/password" to="Passwords/passwordsContainer20/password" method="_on_password_body_entered"]
 [connection signal="coin_collected" from="Passwords/passwordsContainer20/password" to="UI/CounterPasswords" method="_on_password_collected"]
-[connection signal="body_entered" from="End" to="." method="_on_Area_body_entered"]
 [connection signal="body_entered" from="End" to="." method="_on_End_body_entered"]
 [connection signal="body_entered" from="End" to="UI/CounterTime" method="_on_Area_body_entered"]

@@ -10,9 +10,8 @@ var velocity = Vector3.ZERO
 var is_rotating = false
 
 onready var state_machine = $AnimationTree.get("parameters/playback")
-onready var pivot = $pivot
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	velocity = Vector3()
 	is_rotating = false
 	

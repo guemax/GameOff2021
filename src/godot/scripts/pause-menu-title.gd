@@ -4,7 +4,7 @@ var number_of_dots = 0
 var animation_running = false
 var dots = ""
 
-func _process(delta):
+func _process(_delta):
 	if global.pause_menu_opened and not animation_running:
 		animation_running = true
 		animate_text()
@@ -25,7 +25,7 @@ func animate_text():
 		number_of_dots += 1
 	
 	dots = ""
-	for i in range(1, number_of_dots + 1):
+	for _i in range(1, number_of_dots + 1):
 		dots += "."
 	
 	text = "Pausing" + dots
