@@ -110,7 +110,7 @@ anims/key-loop = SubResource( 4 )
 anims/shrink = SubResource( 5 )
 
 [node name="OmniLight" type="OmniLight" parent="."]
-transform = Transform( 3.33333, 0, 0, 0, 3.33333, 0, 0, 0, 3.33333, 0, -0.222973, -2.35929 )
+transform = Transform( 3.33333, 0, 0, 0, 3.33333, 1.42109e-14, 0, -1.42109e-14, 3.33333, 0, -0.222973, -2.35929 )
 light_color = Color( 0.835294, 1, 0.941176, 1 )
 light_energy = 1.68
 light_specular = 0.48
