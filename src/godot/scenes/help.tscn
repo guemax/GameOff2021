@@ -1,0 +1,157 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://fonts/Poppins/Poppins-Black.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://fonts/Poppins/Poppins-SemiBold.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://scripts/button-back.gd" type="Script" id=3]
+[ext_resource path="res://fonts/regular-font.tres" type="DynamicFont" id=4]
+[ext_resource path="res://themes/button.tres" type="StyleBox" id=10]
+[ext_resource path="res://themes/button-hovered.tres" type="StyleBox" id=11]
+[ext_resource path="res://sprites/wall.png" type="Texture" id=12]
+
+[sub_resource type="DynamicFont" id=1]
+size = 80
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 30
+use_filter = true
+font_data = ExtResource( 2 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Wall" type="Sprite" parent="."]
+position = Vector2( 799.072, 433.703 )
+scale = Vector2( 0.889562, 0.889562 )
+texture = ExtResource( 12 )
+
+[node name="BG" type="ColorRect" parent="."]
+margin_right = 1413.0
+margin_bottom = 821.0
+color = Color( 0, 0.0235294, 0.109804, 0.894118 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelTitle" type="Label" parent="."]
+margin_left = 80.0
+margin_right = 1280.0
+margin_bottom = 207.0
+custom_fonts/font = SubResource( 1 )
+text = "Help"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 80.0
+margin_top = 192.0
+margin_right = 506.0
+margin_bottom = 325.0
+custom_fonts/font = ExtResource( 4 )
+text = "Don't know how to play the game or want to know what the idea behind it is?
+
+Find information here!"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonBack" type="Button" parent="."]
+margin_left = 80.0
+margin_top = 583.192
+margin_right = 326.0
+margin_bottom = 654.192
+mouse_default_cursor_shape = 2
+custom_styles/hover = ExtResource( 11 )
+custom_styles/pressed = ExtResource( 11 )
+custom_styles/focus = ExtResource( 11 )
+custom_styles/normal = ExtResource( 10 )
+custom_fonts/font = SubResource( 2 )
+text = "Back"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Help" type="ScrollContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 555.0
+margin_top = 192.0
+margin_right = -40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Help"]
+margin_right = 673.0
+margin_bottom = 1106.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TitleIdea" type="Label" parent="Help/VBoxContainer"]
+margin_right = 673.0
+margin_bottom = 89.0
+custom_fonts/font = SubResource( 3 )
+text = "The idea:
+"
+autowrap = true
+
+[node name="BodyIdea" type="Label" parent="Help/VBoxContainer"]
+margin_top = 93.0
+margin_right = 673.0
+margin_bottom = 596.0
+custom_fonts/font = ExtResource( 4 )
+text = "Due to a bug in a computer program, our main character, the insect, can get into the target computer. 
+Before the malicious code which the insect brings with it can be executed, however, the insect has to make its way through a labyrinth (the computer's hard drive) and comes across passwords of the user lying around. These can be collected to optain points.
+"
+autowrap = true
+
+[node name="TitleControl" type="Label" parent="Help/VBoxContainer"]
+margin_top = 600.0
+margin_right = 673.0
+margin_bottom = 689.0
+custom_fonts/font = SubResource( 3 )
+text = "Control the bug:
+"
+autowrap = true
+
+[node name="BodyControl" type="Label" parent="Help/VBoxContainer"]
+margin_top = 693.0
+margin_right = 673.0
+margin_bottom = 874.0
+custom_fonts/font = ExtResource( 4 )
+text = "Use your arrow keys for (up, down, left and right) for moving the bug forwards, backwards, left and right, respectively.
+"
+autowrap = true
+
+[node name="TitleShortcuts" type="Label" parent="Help/VBoxContainer"]
+margin_top = 878.0
+margin_right = 673.0
+margin_bottom = 967.0
+custom_fonts/font = SubResource( 3 )
+text = "Other keyboard shortcuts:
+"
+autowrap = true
+
+[node name="BodyShortcuts" type="Label" parent="Help/VBoxContainer"]
+margin_top = 971.0
+margin_right = 673.0
+margin_bottom = 1106.0
+custom_fonts/font = ExtResource( 4 )
+text = "Press 'Escape' in the main level to open a pause menu. Press 'Escape' again to close it.
+"
+autowrap = true
+
+[connection signal="pressed" from="ButtonBack" to="ButtonBack" method="_on_Buttonback_pressed"]
