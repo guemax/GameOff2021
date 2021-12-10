@@ -1,6 +1,7 @@
 extends Label
 
 func _ready():
+	global.collected_passwords = 0
 	set_text_passwords()
 
 func _on_password_collected():
