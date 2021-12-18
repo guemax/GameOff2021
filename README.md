@@ -10,6 +10,15 @@ This is my repository for the game I make for the Game Off 2021. I'm using Godot
 Link to the game jam: https://itch.io/jam/game-off-2021  
 Link to the website of my game: https://guemax.itch.io/buggy-attack
 
+Screenshots:
+
+<div style="display: flex; max-width: 100%;">
+  <a style="width: calc(100% / 2);" href="https://github.com/guemax/GameOff2021/docs/screenshots/screenshot-level.jpg"><img src="./docs/screenshots/screenshot-level.jpg"></a>
+  <a style="width: calc(100% / 2);" href="https://github.com/guemax/GameOff2021docs/screenshots/screenshot-end.jpg"><img src="./docs/screenshots/screenshot-end.jpg"></a>
+</div>
+
+[View all screenshots](https://github.com/guemax/GameOff2021/tree/main/docs/screenshots)
+
 ## The idea
 
 Before doing anything, I like to write a spec. This keeps me focused while working,
@@ -24,7 +33,7 @@ The option for marking places where you have already been has also been removed 
 
 ## How to play
 
-This game is currently in development and has only pre-releases (for Windows, macOS and Linux) yet. So if you would like to play it now, download the latest development executable [here](https://github.com/guemax/GameOff2021/releases) and run it.
+This game is currently in development and has only pre-releases (for Windows) yet. So if you would like to play it now, download the latest development executable [here](https://github.com/guemax/GameOff2021/releases) and run it.
 
 ### How to control the bug
 
