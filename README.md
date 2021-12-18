@@ -10,14 +10,14 @@ This is my repository for the game I make for the Game Off 2021. I'm using Godot
 Link to the game jam: https://itch.io/jam/game-off-2021  
 Link to the website of my game: https://guemax.itch.io/buggy-attack
 
-Screenshots:
+<!-- Github seems to not make the width if the image half the size of the size of the page
 
 <div style="display: flex; max-width: 100%;">
   <a style="width: calc(100% / 2);" href="https://github.com/guemax/GameOff2021/docs/screenshots/screenshot-level.jpg"><img src="./docs/screenshots/screenshot-level.jpg"></a>
   <a style="width: calc(100% / 2);" href="https://github.com/guemax/GameOff2021docs/screenshots/screenshot-end.jpg"><img src="./docs/screenshots/screenshot-end.jpg"></a>
-</div>
+</div> -->
 
-[View all screenshots](https://github.com/guemax/GameOff2021/tree/main/docs/screenshots)
+[View screenshots of the game](https://github.com/guemax/GameOff2021/tree/main/docs/screenshots)
 
 ## The idea
 
